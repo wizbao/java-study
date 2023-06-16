@@ -29,9 +29,6 @@
         <mysql-connector.version>8.0.33</mysql-connector.version>
     </properties>
 
-
-
-
     <modules>
         <module>aopgo</module>
         <module>common-service</module>
