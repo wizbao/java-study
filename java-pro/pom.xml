@@ -29,9 +29,6 @@
         <mysql-connector.version>8.0.33</mysql-connector.version>
     </properties>
 
-
-
-
     <modules>
         <module>aopgo</module>
         <module>common-service</module>
@@ -48,10 +45,10 @@
             <artifactId>spring-cloud-loadbalancer</artifactId>
         </dependency>
         <!--  nacos客户端-->
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-client</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.nacos</groupId>-->
+<!--            <artifactId>nacos-client</artifactId>-->
+<!--        </dependency>-->
         <!-- nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
