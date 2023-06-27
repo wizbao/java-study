@@ -1,6 +1,8 @@
 package com.abot.designmode.iterator;
 
 import lombok.ToString;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 书架
@@ -8,23 +10,23 @@ import lombok.ToString;
  */
 @ToString
 public class BookShelf implements Aggregate{
-    private final Book[] books;
+    private final List<Book> books;
     private int last;
 
     public BookShelf(int maxSize){
-        this.books = new Book[maxSize];
+        books = new ArrayList<>(maxSize);
     }
 
     public Book getBookAt(int idx){
-        return books[idx];
+        return books.get(idx);
     }
 
     public void appendBook(Book book) {
-        this.books[last++] = book;
+        books.add(book);
     }
 
     public int getLength(){
-        return last;
+        return books.size();
     }
 
     @Override
