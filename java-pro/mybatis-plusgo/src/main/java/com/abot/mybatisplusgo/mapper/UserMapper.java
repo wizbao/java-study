@@ -4,8 +4,6 @@ import com.abot.mybatisplusgo.entity.User;
 import com.abot.mybatisplusgo.mapper.sqlprovider.UserProvider;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.*;
-
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -30,7 +28,7 @@ public interface UserMapper extends BaseMapper<User> {
      * @param users
      * @return
      */
-    @Update({"<script>",
+    /*@Update({"<script>",
             "<foreach collection='users' item='item'  separator=';'>",
             "update `user`",
             "<set>",
@@ -40,7 +38,38 @@ public interface UserMapper extends BaseMapper<User> {
             "</set>",
             "where `id` = #{item.id} ",
             "</foreach>",
-            "</script>"})
+            "</script>"})*/
+    @Update("<script>" +
+            "update user" +
+            "<set>" +
+            "<trim prefix='username=case' suffix='end,'>" +
+            "    <foreach collection='users' item='user'>" +
+            "        <if test='user.username!=null'>" +
+            "            when id=#{user.id} then #{user.username}" +
+            "        </if>" +
+            "    </foreach>" +
+            "</trim>" +
+            "<trim prefix='password=case' suffix='end,'>" +
+            "    <foreach collection='users' item='user'>" +
+            "        <if test='user.password!=null'>" +
+            "            when id=#{user.id} then #{user.password}" +
+            "        </if>" +
+            "    </foreach>" +
+            "</trim>" +
+            "<trim prefix='remark=case' suffix='end,'>" +
+            "    <foreach collection='users' item='user'>" +
+            "        <if test='user.remark!=null'>" +
+            "            when id=#{user.id} then #{user.remark}" +
+            "        </if>" +
+            "    </foreach>" +
+            "</trim>" +
+            "</set>" +
+            "<where>" +
+            "    <foreach collection='users' item='user'  separator='or'>" +
+            "        id = #{user.id}" +
+            "    </foreach>" +
+            "</where>" +
+            "</script>")
     void updateBatch(@Param("users") List<User> users);
 
     @Update("<script>" +

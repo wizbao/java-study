@@ -41,12 +41,12 @@ public class MybatisPlusgoApplication implements CommandLineRunner {
         user2.setRemark("helloworld");
         users.add(user1);
         users.add(user2);
-        LambdaUpdateWrapper<User> wrapper = new LambdaUpdateWrapper<>();
-        wrapper.eq(User::getId,1L);
-        wrapper.eq(User::getUsername,"haha");
-        User user = userMapper.selectOne(wrapper);
-        System.out.println(user!=null?"true":"false");
-//        userMapper.updateBatch(users);
+//        LambdaUpdateWrapper<User> wrapper = new LambdaUpdateWrapper<>();
+//        wrapper.eq(User::getId,1L);
+//        wrapper.eq(User::getUsername,"haha");
+//        User user = userMapper.selectOne(wrapper);
+//        System.out.println(user!=null?"true":"false");
+        userMapper.updateBatch(users);
 //        userMapper.updateOne(user1);
 //        userMapper.insertBatch(users);
     }
