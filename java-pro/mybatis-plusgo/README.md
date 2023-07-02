@@ -2,7 +2,7 @@
 实现批量更新：  
 1、循环调用mp的mapper.insert  
 2、调用mp的service.saveOrUpdateBatch  
-3、自己实现，如同下面写的两个方式  
+3、自己实现，如同下面写的两个方式
 
 ### mybatis注解实现批量更新
 方式一

@@ -3,8 +3,6 @@ package com.abot.mybatisplusgo.mapper.sqlprovider;
 
 import org.apache.ibatis.builder.annotation.ProviderContext;
 
-import java.util.List;
-
 /**
  * @author weibao
  */
