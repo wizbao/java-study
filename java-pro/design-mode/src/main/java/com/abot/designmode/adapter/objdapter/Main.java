@@ -1,0 +1,12 @@
+package com.abot.designmode.adapter.objdapter;
+
+/**
+ * @author weibao
+ */
+public class Main {
+    public static void main(String[] args) {
+        Print printBanner = new PrintBanner("hello");
+        printBanner.printWeak();
+        printBanner.printStrong();
+    }
+}
