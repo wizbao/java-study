@@ -1,4 +1,4 @@
-package com.abot.designmode.TemplateMethod;
+package com.abot.designmode.templatemethod;
 
 public class CharDisplay extends AbstractDisplay{
     private char ch;

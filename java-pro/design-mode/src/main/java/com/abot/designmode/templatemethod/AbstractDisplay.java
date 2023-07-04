@@ -1,4 +1,4 @@
-package com.abot.designmode.TemplateMethod;
+package com.abot.designmode.templatemethod;
 
 /**
  * 抽象类
