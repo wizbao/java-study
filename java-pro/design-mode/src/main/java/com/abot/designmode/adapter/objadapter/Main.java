@@ -1,4 +1,4 @@
-package com.abot.designmode.adapter.objdapter;
+package com.abot.designmode.adapter.objadapter;
 
 /**
  * @author weibao

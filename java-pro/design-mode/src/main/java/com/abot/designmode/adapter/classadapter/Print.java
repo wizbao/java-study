@@ -1,4 +1,4 @@
-package com.abot.designmode.adapter.classdapter;
+package com.abot.designmode.adapter.classadapter;
 
 /**
  * "需求"接口
