@@ -6,6 +6,7 @@ public class IDCard extends Product {
     private String owner;
 
     IDCard(String owner) {
+        super(owner);
         System.out.println("制作" + owner + "的ID卡");
         this.owner = owner;
     }
