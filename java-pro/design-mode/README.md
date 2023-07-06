@@ -62,5 +62,24 @@ Adapter角色通过委托来使用Adaptee角色。
 ✨ConcreteCreator(具体的创建者)  
   ConcreteCreator角色属于具体加工这一方，它负责生成具体的产品。在示例程序中，由IDCardFactory类扮演此角色。
 
+## Singleton
+> 只有一个实例
+
+## Prototype
+> 通过复制生成实例
+
+### 角色
+✨Prototype(原型)  
+  Product角色负责定义用于复制现有实例来生成新实例的方法。在示例程序中，由Product接口扮演此角色。  
+✨ConcretePrototype(具体的原型)  
+  ConcretePrototype角色负责实现复制现有实例并生成新实例的方法。在示例程序中，由MessageBox类和UnderlinePen类扮演此角色。  
+✨Client(使用者)  
+  Client角色负责使用复制实例的方法生成新的实例。在示例程序中，由Manager类扮演此角色。  
+
+### 思考
+1、不能根据类来生成实例吗？`new Something()`，为什么还需要Prototype模式
+- 对象种类繁多，无法将它们整合到一个类中时
+- 难以根据类生成实例时
+- 想解耦框架与生成的实例时
 
 
