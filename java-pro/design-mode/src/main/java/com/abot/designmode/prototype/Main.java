@@ -4,7 +4,7 @@ import com.abot.designmode.prototype.framework.Manager;
 import com.abot.designmode.prototype.framework.Product;
 
 public class Main {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         // 准备
         Manager manager = new Manager();
         UnderlinePen upen = new UnderlinePen('~');
@@ -20,10 +20,5 @@ public class Main {
         p1.use("hello");
         p2.use("hello");
         p3.use("hello");
-    }*/
-    public static void main(String[] args) {
-        Manager manager = new Manager();
-        Product p1 = manager.create(new MessageBox('-'));
-        p1.use("hello");
     }
 }

@@ -25,12 +25,11 @@ public class MessageBox implements Product {
     @Override
     public Product createClone() {
         Product p = null;
-        /*try {
+        try {
             p = (Product) clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
-        }*/
-        p = new MessageBox(decoChar);
+        }
         return p;
     }
 }
