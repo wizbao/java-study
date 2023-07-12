@@ -10,9 +10,6 @@
     </parent>
 
     <artifactId>pulsargo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>pulsargo</name>
-    <description>pulsargo</description>
 
     <properties>
         <pulsar.version>3.0.0</pulsar.version>
