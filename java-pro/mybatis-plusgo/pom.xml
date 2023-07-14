@@ -9,14 +9,11 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>mybatis-plusgo</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

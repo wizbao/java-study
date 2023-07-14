@@ -8,6 +8,7 @@ class QuartzgoApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
