@@ -1,7 +1,7 @@
-package com.wiz.quartzgo.service;
+package com.abot.quartzgo.service;
 
+import com.abot.quartzgo.entity.ParameterConfig;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wiz.quartzgo.entity.ParameterConfig;
 
 /**
 * @author admin

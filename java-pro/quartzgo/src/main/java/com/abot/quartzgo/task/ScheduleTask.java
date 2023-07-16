@@ -1,7 +1,7 @@
-package com.wiz.quartzgo.task;
+package com.abot.quartzgo.task;
 
-import com.wiz.quartzgo.entity.ParameterConfig;
-import com.wiz.quartzgo.service.ParameterConfigService;
+import com.abot.quartzgo.entity.ParameterConfig;
+import com.abot.quartzgo.service.ParameterConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

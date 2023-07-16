@@ -1,4 +1,4 @@
-package com.wiz.quartzgo;
+package com.abot.quartzgo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

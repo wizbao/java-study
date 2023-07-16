@@ -1,9 +1,9 @@
-package com.wiz.quartzgo.service.impl;
+package com.abot.quartzgo.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wiz.quartzgo.entity.ParameterConfig;
-import com.wiz.quartzgo.mapper.ParameterConfigMapper;
-import com.wiz.quartzgo.service.ParameterConfigService;
+import com.abot.quartzgo.entity.ParameterConfig;
+import com.abot.quartzgo.mapper.ParameterConfigMapper;
+import com.abot.quartzgo.service.ParameterConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

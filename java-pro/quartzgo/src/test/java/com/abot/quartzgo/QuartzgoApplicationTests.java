@@ -1,4 +1,4 @@
-package com.wiz.quartzgo;
+package com.abot.quartzgo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

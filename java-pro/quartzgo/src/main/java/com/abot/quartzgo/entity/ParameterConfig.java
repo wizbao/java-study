@@ -1,4 +1,4 @@
-package com.wiz.quartzgo.entity;
+package com.abot.quartzgo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

@@ -1,7 +1,7 @@
-package com.wiz.quartzgo.service;
+package com.abot.quartzgo.service;
 
-import com.wiz.quartzgo.entity.ParameterConfig;
-import com.wiz.quartzgo.util.ScheduleUtils;
+import com.abot.quartzgo.entity.ParameterConfig;
+import com.abot.quartzgo.util.ScheduleUtils;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;

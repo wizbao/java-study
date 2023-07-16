@@ -1,7 +1,7 @@
-package com.wiz.quartzgo.mapper;
+package com.abot.quartzgo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wiz.quartzgo.entity.ParameterConfig;
+import com.abot.quartzgo.entity.ParameterConfig;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

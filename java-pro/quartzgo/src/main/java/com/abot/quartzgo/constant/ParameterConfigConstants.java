@@ -1,4 +1,4 @@
-package com.wiz.quartzgo.constant;
+package com.abot.quartzgo.constant;
 
 /**
  * @author weibao

@@ -1,6 +1,6 @@
-package com.wiz.quartzgo.util;
+package com.abot.quartzgo.util;
 
-import com.wiz.quartzgo.constant.ParameterConfigConstants;
+import com.abot.quartzgo.constant.ParameterConfigConstants;
 import org.quartz.JobKey;
 import org.quartz.TriggerKey;
 

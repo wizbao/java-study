@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wiz.quartzgo.mapper.ParameterConfigMapper">
+<mapper namespace="com.abot.quartzgo.mapper.ParameterConfigMapper">
 
-    <resultMap id="BaseResultMap" type="com.wiz.quartzgo.entity.ParameterConfig">
+    <resultMap id="BaseResultMap" type="com.abot.quartzgo.entity.ParameterConfig">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="code" column="code" jdbcType="VARCHAR"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
