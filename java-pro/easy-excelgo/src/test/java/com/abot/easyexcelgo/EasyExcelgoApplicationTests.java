@@ -3,11 +3,8 @@ package com.abot.easyexcelgo;
 import com.abot.easyexcelgo.POJO.PO.User;
 import com.abot.easyexcelgo.listener.UserDataListener;
 import com.abot.easyexcelgo.mapper.UserMapper;
-import com.abot.easyexcelgo.util.TestFileUtil;
 import com.alibaba.excel.EasyExcel;
-import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.util.ListUtils;
-import com.alibaba.excel.write.metadata.WriteSheet;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,19 +52,19 @@ class EasyExcelgoApplicationTests {
                 .sheet("模板")
                 .doWrite(this::data);
 
-        // 写法2
-        fileName = TestFileUtil.getPath() + "simpleWrite" + System.currentTimeMillis() + ".xlsx";
-        // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
-        // 如果这里想使用03 则 传入excelType参数即可
-        EasyExcel.write(fileName, User.class).sheet("模板").doWrite(data());
-
-        // 写法3
-        fileName = TestFileUtil.getPath() + "simpleWrite" + System.currentTimeMillis() + ".xlsx";
-        // 这里 需要指定写用哪个class去写
-        try (ExcelWriter excelWriter = EasyExcel.write(fileName, User.class).build()) {
-            WriteSheet writeSheet = EasyExcel.writerSheet("模板").build();
-            excelWriter.write(data(), writeSheet);
-        }
+//        // 写法2
+//        fileName = TestFileUtil.getPath() + "simpleWrite" + System.currentTimeMillis() + ".xlsx";
+//        // 这里 需要指定写用哪个class去写，然后写到第一个sheet，名字为模板 然后文件流会自动关闭
+//        // 如果这里想使用03 则 传入excelType参数即可
+//        EasyExcel.write(fileName, User.class).sheet("模板").doWrite(data());
+//
+//        // 写法3
+//        fileName = TestFileUtil.getPath() + "simpleWrite" + System.currentTimeMillis() + ".xlsx";
+//        // 这里 需要指定写用哪个class去写
+//        try (ExcelWriter excelWriter = EasyExcel.write(fileName, User.class).build()) {
+//            WriteSheet writeSheet = EasyExcel.writerSheet("模板").build();
+//            excelWriter.write(data(), writeSheet);
+//        }
     }
 
     /**
@@ -132,7 +129,7 @@ class EasyExcelgoApplicationTests {
 
         // 有个很重要的点 UserDataListener 不能被spring管理，要每次读取excel都要new,然后里面用到spring可以构造方法传进去
         // 写法3：
-        String fileName = "C:\\Users\\韦小宝\\Desktop\\" + "simpleWrite" + "1689502417501" + ".xlsx";
+        String fileName = "C:\\Users\\韦小宝\\Desktop\\" + "simpleWrite" + "1689505690958" + ".xlsx";
         // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
         EasyExcel.read(fileName, User.class, new UserDataListener(userMapper)).sheet().doRead();
 

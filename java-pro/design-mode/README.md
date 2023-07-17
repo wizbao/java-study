@@ -92,3 +92,13 @@ ConcreteBuilder角色是负责实现Builder角色的接口的类(API)。这里�
 中，由TextBuilder类和HTMLBuilder类扮演此角色。  
 Director(监工)  
 Director角色负责使用Builder角色的接口(API)来生成实例。由Director类扮演
+
+## Abstract Factory
+> 将抽象零件组合成为抽象产品的抽象工厂
+
+### 角色
+抽象产品（抽象产品和抽象零件）、抽象工厂、具体产品、具体工厂
+
+### 特点
+- 容易增加具体的工厂
+- 难以增加新的零件。若要增加，需要对所有具体的工厂进行修改，已经编写完成的具体工程越多，修改的工作量就越大
