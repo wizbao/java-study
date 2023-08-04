@@ -5,21 +5,23 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 
  * @TableName user
  */
 @TableName(value ="user")
-@Data
-@Builder
+//@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class User implements Serializable {
     /**
      * 主键
@@ -41,6 +43,12 @@ public class User implements Serializable {
      * 备注
      */
     private String remark;
+
+    private  Integer type;
+
+    private Date createTime;
+
+    private Date updateTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

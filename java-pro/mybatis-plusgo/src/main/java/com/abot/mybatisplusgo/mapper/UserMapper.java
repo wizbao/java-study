@@ -91,12 +91,12 @@ public interface UserMapper extends BaseMapper<User> {
      * @return
      */
     @Insert("<script>" +
-            "insert into user(username,password,remark) values " +
+            "insert into user(username,password,remark,type,create_time,update_time) values " +
             "<foreach collection='users' item='item' separator=','>" +
-            "(#{item.username},#{item.password},#{item.remark})" +
+            "(#{item.username},#{item.password},#{item.remark},#{item.type},#{item.createTime},#{item.updateTime})" +
             "</foreach>" +
             "</script>")
-    boolean insertBatch(@Param("users") List<User> users);
+    int insertBatch(@Param("users") List<User> users);
 }
 
 
