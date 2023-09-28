@@ -24,6 +24,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     public Boolean insertUser(User user) {
         return userMapper.insert(user) == 1;
     }
+
+    @Override
+    public void update(User user) {
+        User user1 = new User();
+        if (user.getId() == null) {
+            throw new RuntimeException("id不能为空");
+        }else {
+            user1.setId(user.getId());
+        }
+
+            user1.setUsername(user.getUsername());
+
+        userMapper.updateById(user1);
+    }
 }
 
 

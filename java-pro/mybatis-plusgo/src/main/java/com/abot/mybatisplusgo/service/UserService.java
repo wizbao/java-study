@@ -10,4 +10,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface UserService extends IService<User> {
     Boolean insertUser(User user);
+
+    void update(User user);
 }

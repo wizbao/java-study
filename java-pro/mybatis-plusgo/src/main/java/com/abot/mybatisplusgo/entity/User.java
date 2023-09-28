@@ -1,9 +1,6 @@
 package com.abot.mybatisplusgo.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -42,6 +39,7 @@ public class User implements Serializable {
     /**
      * 备注
      */
+    @TableField(updateStrategy = FieldStrategy.IGNORED)
     private String remark;
 
     private  Integer type;
